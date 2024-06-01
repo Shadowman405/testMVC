@@ -1,5 +1,27 @@
 # https://realm.github.io/SwiftLint/rule-directory.html
 
+name: SwiftLint and SwiftFormat
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run SwiftLint
+        run: |
+          swiftlint lint --strict --quiet
+
+      - name: Run SwiftFormat
+        run: |
+          swiftformat --mode lint --quiet
+
 # Enabled rules
 
 opt_in_rules:
