@@ -1,6 +1,7 @@
 import Foundation
 
 // MARK: - AllEmployees
+
 public struct AllEmployees: Codable {
     let team: String
     var people: [Employee]
@@ -8,6 +9,7 @@ public struct AllEmployees: Codable {
 }
 
 // MARK: - Employee
+
 public struct Employee: Codable {
     let fullName, email: String
     let reports: [Report]?
@@ -19,6 +21,7 @@ public struct Employee: Codable {
 }
 
 // MARK: - Report
+
 public struct Report: Codable {
     let fullName, email: String
 
@@ -29,6 +32,7 @@ public struct Report: Codable {
 }
 
 // MARK: - Subteam
+
 public struct Subteam: Codable {
     let team: String
     let people: [Report]

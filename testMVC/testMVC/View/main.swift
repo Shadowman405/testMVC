@@ -3,15 +3,14 @@ import Foundation
 func run() {
     let manager = JSONParser.sharedInstance
 
-    if let data = jsonMockData{
+    if let data = jsonMockData {
         let persons = manager.parseJSON(data: data)
-        
-        if let persons = persons {
+
+        if let persons {
             let companies = manager.personToCompany(persons: persons)
             printCompaniesandEmployeesInIt(companies)
         }
     }
-
 
     func printCompaniesandEmployeesInIt(_ companies: [Company]) {
         for company in companies {

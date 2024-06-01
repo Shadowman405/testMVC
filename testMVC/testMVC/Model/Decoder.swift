@@ -21,7 +21,7 @@ class JSONParser {
         for person in persons {
             for employee in person.people {
                 let email = employee.email
-                guard let companyName = extractDomainName(fromEmail: email) else { return [Company]()}
+                guard let companyName = extractDomainName(fromEmail: email) else { return [Company]() }
 
                 if companies.contains(where: { $0.name == companyName }) {
                     if let index = companies.firstIndex(where: { $0.name == companyName }) {
@@ -388,4 +388,3 @@ public let jsonMockData = """
     }
 ]
 """.data(using: .utf8)
-
