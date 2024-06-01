@@ -4,19 +4,19 @@
 name: SwiftLint
 
 on:
-  pull_request:
-    paths:
-      - '.swiftlint.yml'
-      - '**/*.swift'
+pull_request:
+paths:
+- '.swiftlint.yml'
+- '**/*.swift'
 
 jobs:
-SwiftLint:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.2.1
+linter:
+runs-on: macos-latest
+steps:
+- uses: actions/checkout@v1
+- name: GitHub Action for SwiftLint
+uses: norio-nomura/action-swiftlint@3.2.1
 
-     - name: Run SwiftLint
-        run: |
-          swiftlint lint --strict --quiet
+- name: Run SwiftLint
+run: |
+ swiftlint lint --strict --quiet
