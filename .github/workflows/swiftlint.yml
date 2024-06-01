@@ -1,26 +1,19 @@
 # https://realm.github.io/SwiftLint/rule-directory.html
-
-name: SwiftLint and SwiftFormat
+name: SwiftLint
 
 on:
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'swiftlint.yml'
+      - '**/*.swift'
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
+  SwiftLint:
+    runs-on: maos-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run SwiftLint
-        run: |
-          swiftlint lint --strict --quiet
-
-      - name: Run SwiftFormat
-        run: |
-          swiftformat --mode lint --quiet
+      - uses: actions/checkout@v1
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
 
 # Enabled rules
 
