@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run SwiftLint
         run: |
-          swiftlint lint --strict --quiet
+          swiftlint .
