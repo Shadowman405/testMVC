@@ -5,8 +5,10 @@ on:
 
 jobs:
   SwiftLint:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
+        - name: Link SwiftLint or install it
+        run: brew link --overwrite swiftlint || brew install swiftlint || brew link --overwrite swiftlint
       - name: SwiftLint
         run: |
           set -o pipefail
