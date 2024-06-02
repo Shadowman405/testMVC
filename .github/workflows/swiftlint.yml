@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Link SwiftLint or install it
+        run: brew link --overwrite swiftlint || brew install swiftlint || brew link --overwrite swiftlint
       - name: Run SwiftLint
         run: |
           swiftlint lint --strict --quiet
