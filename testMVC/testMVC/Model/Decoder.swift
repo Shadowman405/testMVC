@@ -33,24 +33,24 @@ class JSONParser {
             }
         }
 
+        /// Extracts company name from email-like string.
+        func extractDomainName(fromEmail email: String) -> String? {
+            guard let atIndex = email.firstIndex(of: "@") else {
+                return nil
+            }
+            let domain = email.suffix(from: atIndex).dropFirst()
+            guard let dotIndex = domain.firstIndex(of: ".") else {
+                return nil
+            }
+            return String(domain.prefix(upTo: dotIndex))
+        }
+
         return companies
     }
 }
 
 let decoder = JSONDecoder()
 public let employes = try! decoder.decode([AllEmployees].self, from: jsonMockData!)
-
-/// Extracts company name from email-like string.
-func extractDomainName(fromEmail email: String) -> String? {
-    guard let atIndex = email.firstIndex(of: "@") else {
-        return nil
-    }
-    let domain = email.suffix(from: atIndex).dropFirst()
-    guard let dotIndex = domain.firstIndex(of: ".") else {
-        return nil
-    }
-    return String(domain.prefix(upTo: dotIndex))
-}
 
 // MARK: - mock JSON
 

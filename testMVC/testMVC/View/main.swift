@@ -52,5 +52,5 @@ struct MainView {
 
 let mainView = MainView()
 let controller = Controller(mainView: mainView)
-//controller.updateMainView()
+controller.updateMainView()
 
