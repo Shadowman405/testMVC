@@ -32,7 +32,8 @@ public struct Controller {
                 print("\n\(company.name.uppercased()):")
                 for employee in company.employees {
                     // print("\(employee.fullName); \(company.team); \(employee.email)")
-                    mainView.printEmployees("\(employee.fullName); \(company.team); \(employee.email)")
+                    mainView
+                        .printEmployees("\(employee.fullName); \(company.team); \(employee.email)")
                 }
             }
         }
@@ -51,7 +52,8 @@ public struct Controller {
 //
 //            for person in unwrapedEmployees {
 //                for personDetails in person.people {
-//                    employees.append("\(personDetails.fullName); \(person.team); \(personDetails.email)")
+//                    
+//    employees.append("\(personDetails.fullName); \(person.team); \(personDetails.email)")
 //                }
 //            }
 //             return employees
