@@ -10,11 +10,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Install SwiftFormat
-        run: brew install swiftformat@0.53.10
+        run: brew install swiftformat
+      - name: Switch to exact SwiftFormat version
+        run: brew switch swiftformat 0.53.10
       - name: Run SwiftFormat
         run: swiftformat .
       - name: Install SwiftLint
-        run: brew install swiftlint@0.55.1
+        run: brew install swiftlint
+      - name: Switch to exact SwiftLint version
+        run: brew switch swiftformat 0.55.1
       - name: Run SwiftLint
         run: swiftlint .
         
