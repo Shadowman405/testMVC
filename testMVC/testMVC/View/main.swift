@@ -66,7 +66,7 @@ struct MainView {
 //                for company in companies {
 //                    print("\n\(company.name.uppercased()):")
 //                    for employee in company.employees {
-//                       
+//
 //        printEmployees("\(employee.fullName ?? ""); \(company.team); \(employee.email ?? "")")
 //                    }
 //                }

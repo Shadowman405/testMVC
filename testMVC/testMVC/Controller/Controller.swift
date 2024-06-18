@@ -52,7 +52,7 @@ public struct Controller {
 //
 //            for person in unwrapedEmployees {
 //                for personDetails in person.people {
-//                    
+//
 //    employees.append("\(personDetails.fullName); \(person.team); \(personDetails.email)")
 //                }
 //            }
