@@ -8,7 +8,6 @@ struct MainView {
     // var delegate: MainViewDelegate?
 
     func run() {
-
 //        let manager = JSONParser.sharedInstance
 //
 //        if let data = jsonMockData {
@@ -48,7 +47,8 @@ struct MainView {
         //        let input = String(data: dataFromJson, encoding: .utf8)!
         //        print("You entered: \(input)")
 
-        // MARK : - Working variant
+        // MARK: - Working variant
+
 //        func updateMainView() {
 //            let stdin = FileHandle.standardInput
 //            let dataFromJson = stdin.availableData
@@ -79,7 +79,6 @@ struct MainView {
 
     func printEmployees(_ someString: String?) {
         print(someString ?? "")
-
     }
 }
 
