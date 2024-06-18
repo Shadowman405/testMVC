@@ -1,24 +1,24 @@
 import Foundation
 
-//protocol MainViewDelegate {
+// protocol MainViewDelegate {
 //    func update()
-//}
+// }
 
 struct MainView {
-   // var delegate: MainViewDelegate?
+    // var delegate: MainViewDelegate?
 
     func run() {
 //        let manager = JSONParser.sharedInstance
-//    
+//
 //        if let data = jsonMockData {
 //            let persons = manager.parseJSON(data: data)
-//    
+//
 //            if let persons {
 //                let companies = manager.personToCompany(persons: persons)
 //                printCompaniesandEmployeesInIt(companies)
 //            }
 //        }
-//    
+//
 //        func printCompaniesandEmployeesInIt(_ companies: [Company]) {
 //            for company in companies {
 //                print("\n\(company.name.uppercased()):")
@@ -42,7 +42,6 @@ struct MainView {
 //        } else {
 //            print("SOmething went wrong")
 //        }
-
     }
 
     func printEmployees(_ someString: String?) {
@@ -53,4 +52,3 @@ struct MainView {
 let mainView = MainView()
 let controller = Controller(mainView: mainView)
 controller.updateMainView()
-

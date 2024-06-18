@@ -13,9 +13,7 @@ public struct Controller {
     init(mainView: MainView, employees: [String] = [String]()) {
         self.mainView = mainView
         self.employees = employees
-    }   
-
-    
+    }
 
     func updateMainView() {
         let manager = JSONParser.sharedInstance
@@ -33,14 +31,15 @@ public struct Controller {
             for company in companies {
                 print("\n\(company.name.uppercased()):")
                 for employee in company.employees {
-                    //print("\(employee.fullName); \(company.team); \(employee.email)")
+                    // print("\(employee.fullName); \(company.team); \(employee.email)")
                     mainView.printEmployees("\(employee.fullName); \(company.team); \(employee.email)")
                 }
             }
         }
 
-        //mainView.run()
+        // mainView.run()
     }
+
 //    var employees = [String]()
 //
 //    mutating func sendData(data: Data) -> [String] {
@@ -62,5 +61,4 @@ public struct Controller {
 //    }
 
     private var employees = [String]()
-
 }

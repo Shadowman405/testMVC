@@ -33,7 +33,7 @@ class JSONParser {
             }
         }
 
-        /// Extracts company name from email-like string.
+        // Extracts company name from email-like string.
         func extractDomainName(fromEmail email: String) -> String? {
             guard let atIndex = email.firstIndex(of: "@") else {
                 return nil
