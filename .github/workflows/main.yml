@@ -1,0 +1,29 @@
+name: main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Linters:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install SwiftFormat
+        run: brew install swiftformat
+      - name: Run SwiftFormat
+        run: swiftformat .
+      - name: Install SwiftLint
+        run: brew install swiftlint
+      - name: Run SwiftLint
+        run: swiftlint .
+
+    test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run tests
+        run: npm run test
