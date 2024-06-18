@@ -50,8 +50,8 @@
 		BF0C37E82C08FB0F000BAD20 = {
 			isa = PBXGroup;
 			children = (
+                BF0C37F22C08FB10000BAD20 /* Products */,
 				BF0C37F32C08FB10000BAD20 /* testMVC */,
-				BF0C37F22C08FB10000BAD20 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
