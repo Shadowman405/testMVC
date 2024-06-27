@@ -1,0 +1,31 @@
+{
+    "team": "iOS One",
+    "people": [
+        {
+            "full_name": "Bob Fett",
+            "email": "fetter1999@aol.com"
+        }
+    ],
+    "subteams": [
+        {
+            "team": "iOS Two",
+            "people": [
+                {
+                    "full_name": "Kate Shawn",
+                    "email": "katesssss@yahoo.net"
+                }
+            ],
+            "subteams": [
+                {
+                    "team": "iOS Three",
+                    "people": [
+                        {
+                            "full_name": "Todd Howard",
+                            "email": "buySkyrimOneMoreTime@bethesda.net"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

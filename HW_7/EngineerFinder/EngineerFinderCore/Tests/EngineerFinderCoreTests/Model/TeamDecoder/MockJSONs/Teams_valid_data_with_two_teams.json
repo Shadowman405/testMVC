@@ -1,0 +1,37 @@
+[
+{
+    "team": "Engineering (Back-end)",
+    "people": [
+        {
+            "full_name": "Alex Bowman",
+            "email": "alexbowman@apple.com",
+            "reports": [
+                {
+                    "full_name": "Barry Johnson",
+                    "email": "barryjohnson@gmail.com"
+                }
+            ]
+        }
+    ]
+},
+{
+    "team": "Engineering (Mobile)",
+    "people": [
+        {
+            "full_name": "Chris Madison",
+            "email": "chrismadison@aol.com"
+        }
+    ],
+    "subteams": [
+        {
+            "team": "iOS",
+            "people": [
+                {
+                    "full_name": "David Wasserman",
+                    "email": "dwasserman@yahoo.com"
+                }
+            ]
+        }
+    ]
+}
+]

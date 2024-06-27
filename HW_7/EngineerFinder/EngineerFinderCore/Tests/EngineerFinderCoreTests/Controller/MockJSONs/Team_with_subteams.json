@@ -1,0 +1,44 @@
+[
+    {
+        "team": "Engineering (iOS)",
+        "people": [
+            {
+                "full_name": "Alex Bowman",
+                "email": "alexbowman@apple.com"
+            }
+        ], 
+        "subteams": [
+            {
+                "team": "Alpha",
+                "people": [
+                    {
+                        "full_name": "Barry Johnson",
+                        "email": "barryjohnson@apple.com"
+                    }
+                ],
+                "subteams": [
+                    {
+                        "team": "Beta",
+                        "people": [
+                            {
+                                "full_name": "David Wasserman",
+                                "email": "dwasserman@yahoo.com"
+                            }
+                        ],
+                        "subteams": [
+                            {
+                                "team": "Gamma",
+                                "people": [
+                                    {
+                                        "full_name": "John Evans",
+                                        "email": "johnevans@evans.com"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
