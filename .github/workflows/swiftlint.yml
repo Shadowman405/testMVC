@@ -40,4 +40,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run tests
-      run: xcodebuild -project hw-07/EngineerRecruitAutomator/EngineerRecruitAutomator.xcodeproj -scheme EngineerRecruitAutomatorCoreTests -configuration Debug test
+      run: xcodebuild -project HW_7/EngineerFinder/EngineerFinder.xcodeproj -scheme EngineerFinderCoreTests -configuration Debug test
