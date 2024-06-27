@@ -1,24 +1,43 @@
-name: SwiftLint
+name: Run linters and tests
 
-on:
-  pull_request:
+on: [pull_request]
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_15.4.app/Contents/Developer
 
 jobs:
-  Linters:
-    runs-on: macos-latest
+  linting:
+    runs-on: macos-14
+    continue-on-error: true
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install SwiftFormat
-        run: brew install swiftformat
-      - name: Switch to exact SwiftFormat version
-        run: brew switch swiftformat 0.53.10
-      - name: Run SwiftFormat
-        run: swiftformat .
-      - name: Install SwiftLint
-        run: brew install swiftlint
-      - name: Switch to exact SwiftLint version
-        run: brew switch swiftformat 0.55.1
-      - name: Run SwiftLint
-        run: swiftlint .
-        
+    - name: Update brew
+      run: brew update
+    - name: Setup cache
+      id: brew-cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/Library/Caches/Homebrew/swiftformat*
+          ~/Library/Caches/Homebrew/swiftlint*
+          ~/Library/Caches/Homebrew/downloads/*swiftformat*
+          ~/Library/Caches/Homebrew/downloads/*swiftlint*
+        key: linters-brew-cache-key
+    - name: Install Linters
+      run: |
+        brew install swiftlint
+        brew install swiftformat
+    - name: Checkout Project
+      uses: actions/checkout@v4
+    - name: Run swiftlint
+      run: swiftlint lint --strict --config swiftlint.yml ./
+    - name: Run swiftformat
+      if: always()
+      run: swiftformat --lint --config .swiftformat ./
+
+
+  test_hw_07:
+    runs-on: macos-14
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run tests
+      run: xcodebuild -project hw-07/EngineerRecruitAutomator/EngineerRecruitAutomator.xcodeproj -scheme EngineerRecruitAutomatorCoreTests -configuration Debug test
