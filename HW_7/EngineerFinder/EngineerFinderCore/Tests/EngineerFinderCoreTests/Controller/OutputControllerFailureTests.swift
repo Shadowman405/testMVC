@@ -22,7 +22,7 @@ final class OutputControllerFailureTests: XCTestCase {
         // Given
         let emtpyStringData = Data("".utf8)
         let expectedErrorCode: Int32 = 3
-        let expectedErrorMessage = expectedErrorMessages.incorrectData.rawValue
+        let expectedErrorMessage = ExpectedErrorMessages.incorrectData.rawValue
 
         // When
         controller.outputView(view, dataRecievedFrom: emtpyStringData)
@@ -37,7 +37,7 @@ final class OutputControllerFailureTests: XCTestCase {
     func test_withMissedValue_returnMissingDataError() {
         // Given
         let expectedErrorCode: Int32 = 3
-        let expectedErrorMessage = expectedErrorMessages.missingData.rawValue
+        let expectedErrorMessage = ExpectedErrorMessages.missingData.rawValue
         guard let inputData = DecodingErrorTestFileNames.missedValue.data
         else {
             XCTFail("failed to prepare input data")
@@ -57,7 +57,7 @@ final class OutputControllerFailureTests: XCTestCase {
     func test_withMissedKey_returnMissingDataError() {
         // Given
         let expectedErrorCode: Int32 = 3
-        let expectedErrorMessage = expectedErrorMessages.missingData.rawValue
+        let expectedErrorMessage = ExpectedErrorMessages.missingData.rawValue
         guard let inputData = DecodingErrorTestFileNames.keyNotFound.data
         else {
             XCTFail("failed to prepare input data")
@@ -77,7 +77,7 @@ final class OutputControllerFailureTests: XCTestCase {
     func test_withTypeMismatch_returnIncorrectDataError() {
         // Given
         let expectedErrorCode: Int32 = 3
-        let expectedErrorMessage = expectedErrorMessages.incorrectData.rawValue
+        let expectedErrorMessage = ExpectedErrorMessages.incorrectData.rawValue
         guard let inputData = DecodingErrorTestFileNames.typeMismatch.data
         else {
             XCTFail("failed to prepare input data")

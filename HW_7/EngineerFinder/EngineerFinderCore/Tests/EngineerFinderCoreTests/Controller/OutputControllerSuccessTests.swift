@@ -27,7 +27,7 @@ final class OutputControllerSuccessTests: XCTestCase {
             return
         }
 
-        let expectedOutput = expectedOutputMessages.teamWithValidAllFields.rawValue
+        let expectedOutput = ExpectedOutputMessages.teamWithValidAllFields.rawValue
 
         // When
         controller.outputView(view, dataRecievedFrom: input)
@@ -48,7 +48,7 @@ final class OutputControllerSuccessTests: XCTestCase {
             return
         }
 
-        let expectedOutput = expectedOutputMessages.teamWithSubreports.rawValue
+        let expectedOutput = ExpectedOutputMessages.teamWithSubreports.rawValue
 
         // When
         controller.outputView(view, dataRecievedFrom: input)
@@ -69,7 +69,7 @@ final class OutputControllerSuccessTests: XCTestCase {
             return
         }
 
-        let expectedOutput = expectedOutputMessages.teamWithSubteams.rawValue
+        let expectedOutput = ExpectedOutputMessages.teamWithSubteams.rawValue
 
         // When
         controller.outputView(view, dataRecievedFrom: input)
