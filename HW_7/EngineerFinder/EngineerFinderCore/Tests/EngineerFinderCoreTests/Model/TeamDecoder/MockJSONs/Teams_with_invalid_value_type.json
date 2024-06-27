@@ -1,0 +1,22 @@
+[
+{
+    "team": 1,
+    "people": [
+        {
+            "full_name": "Chris Madison",
+            "email": "chrismadison@aol.com"
+        }
+    ],
+    "subteams": [
+        {
+            "team": "iOS",
+            "people": [
+                {
+                    "full_name": "David Wasserman",
+                    "email": "dwasserman@yahoo.com"
+                }
+            ]
+        }
+    ]
+}
+]
