@@ -1,0 +1,17 @@
+[
+    {
+        "team": "Engineering (Back-end)",
+        "people": [
+            {
+                "full_name": "Alex Bowman",
+                "email": "alexbowman@apple.com",
+                "reports": [
+                    {
+                        "full_name": "Barry Johnson",
+                        "email": "barryjohnson@gmail.com"
+                    }
+                ]
+            }
+        ]
+    }
+]

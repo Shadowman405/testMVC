@@ -1,0 +1,44 @@
+[
+    {
+        "team": "Engineering Android",
+        "people": [
+            {
+                "full_name": "Alex Persidskiy",
+                "email": "johnnewman@yahoo.com"
+            }
+        ]
+    },
+    {
+        "team": "Engineering iOS",
+        "people": [
+            {
+                "full_name": "John Newman",
+                "email": "johnnewman@yahoo.com"
+            },
+
+        ],
+        "subteams": [
+            {
+                "team": "iOS Beta",
+                "people": [
+                    {
+                        "full_name": "Alex Man",
+                        "email": "alexman@yahoo.com",
+                        "reports": [
+                            {
+                                "full_name": "Yahir Man",
+                                "email": "yahirman@yahoo.com"
+                            }
+                        ]
+                    }
+                ],
+                "subteams": [
+                    {
+                        "team": "iOS Gamma",
+                        "people": []
+                    }
+                ]
+            }
+        ]
+    }
+]
